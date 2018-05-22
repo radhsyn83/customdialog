@@ -3,7 +3,6 @@ package id.syndro.simpledialog;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.TextView;
@@ -38,7 +37,7 @@ public class SimpleDialog {
     public void textDialog(final Activity context, String msg, Boolean finishOnClose) {
         if (finishOnClose) {
             MaterialDialog mMaterialDialog = new MaterialDialog.Builder(context)
-                    .customView(R.layout.custom_textDialog, false)
+                    .customView(R.layout.custom_text_dialog, false)
                     .positiveText("Close")
                     .onPositive(new MaterialDialog.SingleButtonCallback() {
                         @Override
@@ -60,7 +59,7 @@ public class SimpleDialog {
             tv_msg.setText(msg);
         } else {
             MaterialDialog mMaterialDialog = new MaterialDialog.Builder(context)
-                    .customView(R.layout.custom_textDialog, false)
+                    .customView(R.layout.custom_text_dialog, false)
                     .positiveText("Close")
                     .onPositive(new MaterialDialog.SingleButtonCallback() {
                         @Override
